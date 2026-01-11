@@ -6,8 +6,11 @@
 
 void insertion_sort_test(int ary[],int len, unsigned char order){
     list_elem *list=array_to_list(ary,10);
+    if(list==NULL){
+
+    }
     list_printf(list);
-    list_printf(list_find_end(list));
+    list_printf(list_find_end(list)); 
     list_append(list,&ary[10],10);
     list_printf(list);
     list_insert_by_index(list,&ary[0],3,40);
@@ -19,7 +22,7 @@ void insertion_sort_test(int ary[],int len, unsigned char order){
     list_free(sort_list);
 }
 
-void main(){
+int main(){
     int ary[20];
     int i=0;
     srand(time(0));
@@ -32,4 +35,5 @@ void main(){
     insertion_sort_test(ary,20,0);
 
     printf("main.c end\n");
+    return 0;
 }
