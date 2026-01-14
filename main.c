@@ -32,7 +32,16 @@ int main(){
     }
     printf("\n");
 
-    insertion_sort_test(ary,20,0);
+    //insertion_sort_test(ary,20,0);
+
+{   
+    //int ary[8]={0,1,5,6,4,20,3,7};
+    int len=20;
+    int *tmp=heap_sort(ary,len,0);
+    for(i=0;i<len;++i){
+        printf(" %d",ary[i]);
+    }
+    printf("\n");}
 
     printf("main.c end\n");
     return 0;

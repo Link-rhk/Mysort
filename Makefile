@@ -2,7 +2,7 @@
 SRC_DIR = src
 INC_DIR = inc
 BUILD_DIR = bin
-OBJ_DIR = $(BUILD_DIR)/obj
+OBJ_DIR = $(BUILD_DIR)
 OUT_DIR = out
 
 # 查找源文件
@@ -49,7 +49,7 @@ else
 	make_dir = mkdir -p
 	remove = rm -rf
 	EXE_EXT = 
-	move = rm 
+	move = mv 
 endif
 
 ifeq ("$(BUILDDIR)", "")
@@ -59,7 +59,7 @@ endif
 #THIS_BUILD_DIR=$(BUILDDIR)
 
 # 默认目标
-all: init $(BUILD_DIR)/$(TARGET)$(EXE_EXT)
+all: clean init $(BUILD_DIR)/$(TARGET)$(EXE_EXT)
 
 # 初始化：创建目录
 init:
@@ -100,6 +100,4 @@ show:
 	@echo "bin_dir: $(OBJ_DIR)"
 	@echo "bin_dir: $(OBJS_WITH_PATH)"
 
-output:
-	@
 .PHONY: all init clean show

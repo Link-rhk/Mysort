@@ -19,6 +19,9 @@ unsigned char list_insert_by_index(list_elem *list_head, int elem[], int len, in
 //list_elem *list_insert_by_sort(list_elem *list_head,int data, unsigned order);
 list_elem *insertion_sort_array(int array[],int len,unsigned char order);
 
+//void build_the_heap_rule(int ary[], int len, unsigned char order);
+int *heap_sort(int ary[], int len, unsigned char order);
+
 /// @brief tansform array to list .
 /// @param array [input] the array wait to be transform.
 /// @param len [input] the len of array.
