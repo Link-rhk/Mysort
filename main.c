@@ -35,7 +35,7 @@ int main(){
     //insertion_sort_test(ary,20,0);
 
 {   
-    //int ary[8]={0,1,5,6,4,20,3,7};
+    //int ary[20]={12,7,86,85,95,95,42,15,52,48,5,64,78,88,5,69,90,93,64,30};
     int len=20;
     int *tmp=heap_sort(ary,len,0);
     for(i=0;i<len;++i){
